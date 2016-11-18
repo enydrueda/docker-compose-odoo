@@ -10,8 +10,8 @@ services:
     restart: always
     environment:
       PGHOST: db
-      PGUSER: odoo
-      PGPASSWORD: odoo
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
     volumes:
       - ./extra_addons:/mnt/extra-addons
     depends_on:
