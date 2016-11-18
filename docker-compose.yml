@@ -12,8 +12,8 @@ services:
       PGHOST: db
       POSTGRES_USER: odoo
       POSTGRES_PASSWORD: odoo
-    volumes:
-      - ./extra_addons:/mnt/extra-addons
+    volumes_from:
+      - odoo8_data
     depends_on:
       - db
     links:
